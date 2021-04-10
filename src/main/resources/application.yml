@@ -2,4 +2,4 @@ server:
   port: 8080
 spring:
   profiles:
-    active: qa
+    active: ${SPRING_ACTIVE_PROFILE}
