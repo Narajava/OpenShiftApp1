@@ -21,6 +21,12 @@ public class MyTestController {
 	
 	 @Value("#{systemEnvironment['SPRING_ACTIVE_PROFILE']}")
 	 private String myExternalProperty;
+	 
+	 @Value("#{systemEnvironment['SPRING_CLOUD_USER_NAME']}")
+	 private String springCloudUserName;
+	 
+	 @Value("#{systemEnvironment['SPRING_CLOUD_USER_PASSWORD']}")
+	 private String springCloudPassword;
 	
 	@GetMapping("/NaraTest")
 	public String getMsg() {
@@ -29,6 +35,10 @@ public class MyTestController {
 		System.out.println("Hi Message");
 		System.out.println("myExternalProperty "+myExternalProperty);
 		System.out.println(System.getenv("SPRING_ACTIVE_PROFILE"));
+		System.out.println("springCloudUserName "+springCloudUserName);
+		System.out.println("springCloudPassword "+springCloudPassword);
+		System.out.println(System.getenv("SPRING_CLOUD_USER_NAME"));
+		System.out.println(System.getenv("SPRING_CLOUD_USER_PASSWORD"));
 		return "Hello World";
 	}
 
