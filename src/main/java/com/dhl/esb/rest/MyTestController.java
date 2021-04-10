@@ -23,6 +23,7 @@ public class MyTestController {
 	public String getMsg() {
 		System.out.println("Active Profile "+activeProfile);
 		System.out.println("Hello Message");
+		System.out.println("Hi Message");
 		return "Hello World";
 	}
 
