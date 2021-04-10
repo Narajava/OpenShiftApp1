@@ -22,6 +22,7 @@ public class MyTestController {
 	@GetMapping("/NaraTest")
 	public String getMsg() {
 		System.out.println("Active Profile "+activeProfile);
+		System.out.println("Hello Message");
 		return "Hello World";
 	}
 
